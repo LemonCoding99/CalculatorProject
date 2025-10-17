@@ -38,9 +38,20 @@ public class App {
             System.out.print("사칙연산 기호를 입력하세요: ");
             char operator = scanner.next().charAt(0); // scanner.next(): 첫 공백 전까지만 읽음
 
-            // 사칙연산
+            // calculator 객체 생성(계산기 객체를 생성하고 입력값을 전달)
+            Calculator  calculator = new Calculator(number1, number2, operator);
 
+            // 현재 계산된 결과 조회하기
+            System.out.println(calculator.getCurrentResult());
 
+            // 전체 결과 조회하기
+            System.out.println(calculator.getResults());
+
+            // 종료 물어보기
+            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+            String input = scanner.next(); //
+            if (input.equals("exit"))
+                break;
 
         }
     }

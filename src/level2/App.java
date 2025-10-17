@@ -39,13 +39,22 @@ public class App {
             char operator = scanner.next().charAt(0); // scanner.next(): 첫 공백 전까지만 읽음
 
             // calculator 객체 생성(계산기 객체를 생성하고 입력값을 전달)
-            Calculator  calculator = new Calculator(number1, number2, operator);
+            Calculator calculator = new Calculator(number1, number2, operator);
 
-            // 현재 계산된 결과 조회하기
-            System.out.println(calculator.getCurrentResult());
+            // 현재 계산된 결과 출력하기
+            int result = calculator.calculate(scanner);
+            System.out.println("현재 계산 결과: " + result);
 
             // 전체 결과 조회하기
             System.out.println(calculator.getResults());
+
+            // 첫 번째 값 삭제하기
+            System.out.println("가장 먼저 저장된 결과를 삭제하시겠습니까? (yes/no) ");
+            String deleteResult = scanner.next();
+            if (deleteResult.equals("yes")) {
+                calculator.delete();
+                System.out.println("남은 결과 리스트: " + calculator.getCurrentResult());
+            }
 
             // 종료 물어보기
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");

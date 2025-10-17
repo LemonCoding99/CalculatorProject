@@ -6,12 +6,14 @@ import java.util.ArrayList;
 public class Calculator {
 
     // 속성
-    int number1;
-    int number2;
-    char operator;
+    private int number1;
+    private int number2;
+    private char operator;
 
-    // 결과 저장하기
-    private ArrayList<Integer> results = new ArrayList<>();
+    // 결과 저장하기 (컬렉션)
+    // 모든 calculator 객체가 같은 results를 공유하도록 static으로 변경
+    private static ArrayList<Integer> results = new ArrayList<>(); // 캡슐화(private)
+
 
     // 생성자
     Calculator(int number1, int number2, char operator) {
@@ -20,14 +22,15 @@ public class Calculator {
         this.operator = operator;
     }
 
-    // 기능 (메서드)
+
+    // 기능
     // [접근제어자][리턴타입].[메서드명(매개변수)]{메서드 구현}
     // 연산(calculate()), 결과 조회(getResults()), 결과 삭제(delete()) + 수정(setResults())
 
     // 연산 메서드
     // Scanner 객체를 calculate() 메서드에 전달하여 number2 지속적으로 재입력받기
     public int calculate(Scanner scanner) {  // 매개변수 적어주기
-        int result = 0; // 결과값 받을 변수 설정
+        int result; // 결과값 받을 변수 설정
 
         // 나누기가 0이하가 아닌 값을 입력받는 코드
         if (operator == '/') {
@@ -61,23 +64,25 @@ public class Calculator {
         return result;
     }
 
-    // 전체 결과 조회 게터
-    // arr에 추가되는 기능 넣어야 함
-    ArrayList<Integer> getResults() {
-        return new ArrayList<>(results); // 업데이트 된 array를 가져와야 하므로 this 말고 new 써주기
+    // 결과 삭제 메서드 (FIFO)
+    public void delete() {
+        if (!results.isEmpty()) {  // results가 비어있는지 확인하기
+            results.remove(0);
+            System.out.println("삭제 완료");
+        } else {
+            System.out.println("삭제할 값이 없습니다.");
+        }
     }
 
     // 현재 계산된 결과 조회 게터
     public int getCurrentResult() {
-        return calculate(new Scanner(System.in)); // 입력받은 값을 기반으로
+        if(results.isEmpty()) return 0;
+        return results.get(results.size() - 1); // getLast(): 버전 안맞음
     }
 
-    // 결과 삭제 메서드
-    // 가장 먼저 저장된 결과 삭제하기
-
-    // 결과 수정 메서드
-    // 잘 모르겠다😭
-
-
+    // 전체 결과 조회 게터
+    ArrayList<Integer> getResults() {
+        return results;
+    }
 
 }

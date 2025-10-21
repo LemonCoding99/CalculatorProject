@@ -30,14 +30,6 @@ public class Calculator {
     public int calculate(Scanner scanner) {
         int result; // 결과값 받을 변수 설정하기
 
-        // 나눗셈일 때 두 번째 숫자가 0일 경우 예외처리하기
-        // 나누기가 0이하가 아닌 값을 입력받는 코드
-        if (operator == '/') {
-            while (number2 <= 0) {
-                System.out.println("0이하가 아닌 두 번째 숫자를 입력하세요: ");
-                number2 = scanner.nextInt();
-            }
-        }
 
         switch (operator) {
             case ('+'):
@@ -84,5 +76,4 @@ public class Calculator {
     ArrayList<Integer> getResultList() {
         return resultList;
     }
-
 }

@@ -12,7 +12,7 @@ public class Calculator {
 
     // 결과 저장하기 (컬렉션)
     // 모든 calculator 객체가 같은 results를 공유하도록 static으로 변경
-    private static ArrayList<Integer> results = new ArrayList<>(); // 캡슐화(private)
+    private static ArrayList<Integer> resultList = new ArrayList<>(); // 캡슐화(private)
 
 
     // 생성자
@@ -58,7 +58,7 @@ public class Calculator {
         }
 
         // 연산 결과값 리스트에 저장하기
-        results.add(result);
+        resultList.add(result);
 
         // 연산 결과 반환하기
         return result;
@@ -66,8 +66,8 @@ public class Calculator {
 
     // 결과 삭제하는 메서드(FIFO)
     public void delete() {
-        if (!results.isEmpty()) {  // results가 비어있는지 확인하기
-            results.remove(0);
+        if (!resultList.isEmpty()) {  // results가 비어있는지 확인하기
+            resultList.remove(0);
             System.out.println("삭제 완료");
         } else {
             System.out.println("삭제할 값이 없습니다.");
@@ -76,13 +76,13 @@ public class Calculator {
 
     // 현재 계산된 결과 조회하는 게터
     public int getCurrentResult() {
-        if(results.isEmpty()) return 0;
-        return results.get(results.size() - 1); // getLast(): 버전 안맞음
+        if(resultList.isEmpty()) return 0;
+        return resultList.get(resultList.size() - 1); // getLast(): 버전 안맞음
     }
 
     // 전체 결과 조회하는 게터
-    ArrayList<Integer> getResults() {
-        return results;
+    ArrayList<Integer> getResultList() {
+        return resultList;
     }
 
 }

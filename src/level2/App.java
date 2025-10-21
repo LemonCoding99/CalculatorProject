@@ -48,14 +48,14 @@ public class App {
             System.out.println("현재 계산 결과: " + result);
 
             // 전체 결과 조회하기
-            System.out.println(calculator.getResults());
+            System.out.println(calculator.getResultList());
 
             // 첫 번째 값 삭제하기
             System.out.println("가장 먼저 저장된 결과를 삭제하시겠습니까? (yes/no) ");
             String deleteResult = scanner.next();
             if (deleteResult.equals("yes")) {
                 calculator.delete();
-                System.out.println("남은 결과 리스트: " + calculator.getResults());
+                System.out.println("남은 결과 리스트: " + calculator.getResultList());
             }
 
             // 종료 물어보기

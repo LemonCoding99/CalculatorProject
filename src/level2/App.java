@@ -6,16 +6,17 @@ public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // 입력받기
-        while (true) {  // 연산 반복
+        // 숫자, 사칙연산 기호 입력받기
+        while (true) {
             // 첫 번째 숫자 입력받기
             int number1;
             while (true) {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 number1 = scanner.nextInt();
 
+                // 0보다 작은 수가 입력될 경우 재입력 요청
                 if (number1 < 0) {
-                    System.out.print("0을 포함하지 않는 양수인 ");
+                    System.out.print("0이상의 양수인 ");
                     continue;
                 }
                 break;
@@ -26,9 +27,9 @@ public class App {
             while (true) {
                 System.out.print("두 번째 숫자를 입력하세요: ");
                 number2 = scanner.nextInt();
-
+                // 0보다 작은 수가 입력될 경우 재입력 요청
                 if (number2 < 0) {
-                    System.out.print("0을 포함하지 않는 양수인 ");
+                    System.out.print("0 이상의 양수인 ");
                     continue;
                 }
                 break;
@@ -37,6 +38,7 @@ public class App {
             // 사칙연산 기호 입력받기
             System.out.print("사칙연산 기호를 입력하세요: ");
             char operator = scanner.next().charAt(0); // scanner.next(): 첫 공백 전까지만 읽음
+
 
             // calculator 객체 생성(계산기 객체를 생성하고 입력값을 전달)
             Calculator calculator = new Calculator(number1, number2, operator);
@@ -53,7 +55,7 @@ public class App {
             String deleteResult = scanner.next();
             if (deleteResult.equals("yes")) {
                 calculator.delete();
-                System.out.println("남은 결과 리스트: " + calculator.getCurrentResult());
+                System.out.println("남은 결과 리스트: " + calculator.getResults());
             }
 
             // 종료 물어보기

@@ -27,15 +27,8 @@ Lv1은 클래스 없이 제작되었으며 기본적인 연산을 수행할 수 
 
 
 ## 5. 프로젝트 구조(Project Structure)
-└─src
- ├─level1
- │  App.java
- │
- ├─level2
- │  App.java
- │  Calculator.java
- │
- └─level3
+<img width="322" height="213" alt="image" src="https://github.com/user-attachments/assets/acdaa0c7-c788-47b3-ae1d-af99067d3694" />
+
 
 
 ## 6. 사용 방법(Usage)
@@ -51,14 +44,18 @@ Lv1은 클래스 없이 제작되었으며 기본적인 연산을 수행할 수 
 - 리스트에 값 저장하기
 <img width="571" height="492" alt="image" src="https://github.com/user-attachments/assets/b964f214-fa78-4ae7-bf9c-8000ec85016e" />
 
+
 - 곱셈(*), 나눗셈(/)
 <img width="478" height="488" alt="image" src="https://github.com/user-attachments/assets/f821b9fa-eba8-434f-9928-f16b60bc6de4" />
+
 
 - 나눗셈일 때 0으로 나누는 경우 예외처리하기
 <img width="457" height="246" alt="image" src="https://github.com/user-attachments/assets/26b15fed-448d-4673-8858-72dd0b139ff7" />
 
+
 - 가장 오래된 결과값 삭제하기
 <img width="512" height="102" alt="image" src="https://github.com/user-attachments/assets/cc719c58-3ed7-4c6c-a86f-7e34cbfdb5c5" />
+
 
 - 계산기 종료하기
 <img width="437" height="113" alt="image" src="https://github.com/user-attachments/assets/c829e672-f0ca-4a44-84f9-fbff33d55899" />

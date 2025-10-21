@@ -22,7 +22,7 @@ Lv1은 클래스 없이 제작되었으며 기본적인 연산을 수행할 수 
 - 사칙연산 계산: 덧셈(+), 뺼셈(-), 곱셈(*), 나눗셈(/)을 수행합니다.
 - 저장 기능: 계산한 결과값 리스트에 저장합니다.
 - 삭제 기능: 리스트에 저장 된 계산결과 중 가장 처음에 추가된 결과값을 삭제합니다.
-- 예외처리: 0으로 나누는 경우, 공백을 입력한 경우에 대한 예외처리할 수 있습니다.
+- 예외처리: 0보다 작은 수를 입력하는 경우, 0으로 나누는 경우에 대한 예외처리할 수 있습니다
 - 종료기능: 'exit' 입력 시 프로그램 종료합니다.
 
 
@@ -42,19 +42,23 @@ Lv1은 클래스 없이 제작되었으며 기본적인 연산을 수행할 수 
 ## 7. 구현 예시(Example)
 - 덧셈(+), 뺄셈(-)
 - 리스트에 값 저장하기
-<img width="571" height="492" alt="image" src="https://github.com/user-attachments/assets/b964f214-fa78-4ae7-bf9c-8000ec85016e" />  
-
+<img width="448" height="492" alt="image" src="https://github.com/user-attachments/assets/23b57cdd-d29a-42bf-a8c2-42f3f76b8202" />
+  
 - 곱셈(*), 나눗셈(/)
-<img width="478" height="488" alt="image" src="https://github.com/user-attachments/assets/f821b9fa-eba8-434f-9928-f16b60bc6de4" />  
-
+<img width="465" height="496" alt="image" src="https://github.com/user-attachments/assets/8d459f16-64c6-49a6-888f-a6dc87181eeb" />
+  
+- 0보다 작은 값이 입력된 경우 예외처리하기
+<img width="433" height="158" alt="image" src="https://github.com/user-attachments/assets/a3b51299-7270-4dd2-92fa-3c5ae7dc3092" />
+  
 - 나눗셈일 때 0으로 나누는 경우 예외처리하기
-<img width="457" height="246" alt="image" src="https://github.com/user-attachments/assets/26b15fed-448d-4673-8858-72dd0b139ff7" />  
-
+<img width="475" height="248" alt="image" src="https://github.com/user-attachments/assets/ddf0927e-ceae-4dc3-8a5c-7bce12a1033b" />
+  
 - 가장 오래된 결과값 삭제하기
-<img width="512" height="102" alt="image" src="https://github.com/user-attachments/assets/cc719c58-3ed7-4c6c-a86f-7e34cbfdb5c5" />  
-
+<img width="463" height="112" alt="image" src="https://github.com/user-attachments/assets/780f4e9f-abce-4de3-8c32-ee6a36092f4d" />
+  
 - 계산기 종료하기
-<img width="437" height="113" alt="image" src="https://github.com/user-attachments/assets/c829e672-f0ca-4a44-84f9-fbff33d55899" />  
+<img width="427" height="110" alt="image" src="https://github.com/user-attachments/assets/b340091e-89b7-48c8-9e2d-2fc81041ac8c" />
+  
 
 
 ## 8. 향후 개선 계획(Future Improvements)
